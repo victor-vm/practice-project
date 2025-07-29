@@ -1,0 +1,10 @@
+name: metadata
+on: issues
+jobs:
+  github-metadata:
+    runs-on: ubuntu-latest
+    steps:
+      - name: metalogs
+        run: echo "${{ toJSON(github) }}""
+    
+  
