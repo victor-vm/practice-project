@@ -1,10 +1,10 @@
 name: metadata
 on: issues
 jobs:
-  github-metadata:
+  output-info:
     runs-on: ubuntu-latest
     steps:
-      - name: metalogs
-        run: echo "${{ toJSON(github) }}""
+      - name: Output event details
+        run: echo "${{ toJSON(github.event) }}"
     
   
